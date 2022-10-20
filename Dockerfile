@@ -22,7 +22,7 @@ RUN apt-get install -y openjdk-8-jre
 ENV DISPLAY=:99
 
 # Install requirements first so this step is cached by Docker
-COPY /requierments.txt /home/selenium-aws-fargate-demo/requirements.txt
+COPY /requirements.txt /home/selenium-aws-fargate-demo/requirements.txt
 WORKDIR /home/selenium-aws-fargate-demo/
 RUN pip install -r requirements.txt
 
